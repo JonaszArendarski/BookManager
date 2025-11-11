@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+/* Reset / baza */
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #f8f9fa;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 50px 16px;
+}
+
+
+.table-panel {
+  width: 95%;
+  max-width: 1200px;
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  display: block; /* standard */
+  box-sizing: border-box;
+}
+
+.table-panel h2 {
+  text-align: center;
+  margin: 0 0 20px;
+  font-size: 1.5rem;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+.table-panel table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background: transparent;
+}
+
+/* Nagłówek i wiersze */
+.table-panel thead tr {
+  background-color: #0d6efd;
+  color: #fff;
+}
+
+.table-panel tbody tr:hover {
+  background-color: #f1f5ff;
+}
+
+
+.table-panel th,
+.table-panel td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  box-sizing: border-box;
+}
+
+
+.table-panel table.has-actions td:last-child,
+.table-panel table.has-actions th:last-child {
+  white-space: nowrap;
+  width: 1%;
+}
+
+
+.table-panel td .btn,
+.table-panel td a.btn {
+  margin: 0 4px;
+  vertical-align: middle;
+}
+
+
+@media (max-width: 576px) {
+  .table-panel th,
+  .table-panel td {
+    padding: 8px 10px;
+    font-size: 0.95rem;
+  }
+}

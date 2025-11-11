@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Add New Category</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" >
+<link th:href="@{/styles/addstyle.css}" rel="stylesheet" />
+<style>
+  html, body {
+    height: 100%;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: start; 
+    padding-top: 50px;
+  }
+</style>
+</head>
+<body>
+<div th:replace = "~{common/header :: header}"></div>
+<div>
+ <h2>Create new category</h2>
+ <br />
+ <form th:action="@{/save_category}" th:object="${category}" method="post">
+ <table>
+ <tr>
+ <td>Description:</td>
+ <td><input type="text" th:field="*{description}"/></td>
+ </tr>
+
+ </table>
+ <button type="submit" class="btn btn-success">Save</button>
+ </form>
+</div>
+</body>
+
+<div th:replace = "~{common/footer :: footer}"></div>
+</html>
+
